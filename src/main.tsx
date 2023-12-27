@@ -6,6 +6,7 @@ import './index.css'
 import { ThemeProvider } from '@mui/material'
 import { AppTheme } from './theme'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import 'animate.css';
 
 const queryClient = new QueryClient()
 

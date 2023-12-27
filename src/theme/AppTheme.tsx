@@ -19,10 +19,6 @@ export const AppTheme = createTheme({
             light: '#ba1a1a',
             main: '#ba1a1a',
             dark: '#ffb4ab'
-        },
-        text: {
-            primary: '#ffffff',
-            secondary: '#ffffff'
         }
     }
 });
