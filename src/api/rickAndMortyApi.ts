@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const chractersApi = axios.create({
+export const rickAndMortyApi = axios.create({
     baseURL: 'https://rickandmortyapi.com/api',
     headers: {}
 })

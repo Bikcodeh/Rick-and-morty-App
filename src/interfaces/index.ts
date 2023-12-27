@@ -1,6 +1,6 @@
-export interface CharactersResponse {
+export interface ApiResponse<T> {
     info: Info;
-    results: Character[];
+    results: T[];
 }
 
 export interface Character {
@@ -34,4 +34,14 @@ export interface Info {
     pages: number;
     next: string;
     prev?: any;
+}
+
+export interface Location {
+  id: number;
+  name: string;
+  type: string;
+  dimension: string;
+  residents: string[];
+  url: string;
+  created: string;
 }
