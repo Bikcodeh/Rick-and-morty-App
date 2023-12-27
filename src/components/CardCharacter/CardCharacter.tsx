@@ -3,8 +3,8 @@ import { Card, CardContent, CardMedia, Typography } from "@mui/material"
 
 import { Status } from ".."
 import { Character } from "../../interfaces"
-import './styles.css'
 import { getCharacterStatusColor } from "../../helpers";
+import './styles.css'
 
 interface Props {
     character: Character;

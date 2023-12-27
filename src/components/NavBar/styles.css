@@ -1,0 +1,18 @@
+.navBarItem {
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+.navBarItem:hover div {
+    color: #d3e8d2;
+}
+.navBarItem:visited {
+  text-decoration: none;
+}
+.navBarItem:hover {
+  text-decoration: none;
+}
+
+.active div {
+    color: #85fb9f;
+}

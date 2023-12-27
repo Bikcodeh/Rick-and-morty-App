@@ -11,7 +11,7 @@ export const useCharacters = (query: string) => {
 
     const charactersQuery = useQuery({
         queryFn:() => getCharacters(query),
-        queryKey: ['characters ']
+        queryKey: ['characters']
     });
 
     return {
