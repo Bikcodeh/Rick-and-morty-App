@@ -4,6 +4,7 @@ import { Card, CardContent, CardMedia, Typography } from "@mui/material"
 import { Status } from ".."
 import { Character } from "../../interfaces"
 import './styles.css'
+import { getCharacterStatusColor } from "../../helpers";
 
 interface Props {
     character: Character;
@@ -11,7 +12,7 @@ interface Props {
 
 export const CardCharacter: FC<Props> = ({ character }) => {
     return (
-        <Card component="div" sx={{ border: '2px solid #74ee15' }} className="characterContainer">
+        <Card component="div" sx={{ border: `2.5px solid ${getCharacterStatusColor(character.status)}` }} className="characterContainer">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <Status status={character.status} />
                 <CardMedia

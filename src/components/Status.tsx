@@ -2,6 +2,7 @@ import { FC } from "react";
 import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
 import { StatusCharacter } from "../interfaces";
+import { getCharacterStatusColor } from "../helpers";
 
 interface Props {
     status: StatusCharacter;
@@ -9,18 +10,7 @@ interface Props {
 
 const StatusBadge = styled.div<Props>`
     text-align: center;
-    background-color: ${(props) => {
-        switch (props.status) {
-            case StatusCharacter.DEAD:
-                return 'red';
-            case StatusCharacter.ALIVE:
-                return 'green';
-            case StatusCharacter.UNKNOWN:
-                return 'gray';
-            default:
-                return 'lightgray';
-        }
-    }};
+    background-color: ${(props) => getCharacterStatusColor(props.status) };
     position: absolute;
     align-self: end;
     margin-top: 16px;
@@ -30,7 +20,6 @@ const StatusBadge = styled.div<Props>`
 `;
 
 export const Status: FC<Props> = ({ status }) => {
-    console.log(status)
     return (
         <StatusBadge status={status}>
             <Typography color="white" fontSize={12} fontWeight={900}>{status}</Typography>
