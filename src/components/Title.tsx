@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react'
 
-const Title = React.memo(() => {
+export const Title = React.memo(() => {
     return (
         <Grid container justifyContent='center' mb={2}>
             <Grid item>
@@ -10,5 +10,3 @@ const Title = React.memo(() => {
         </Grid>
     )
 });
-
-export default Title

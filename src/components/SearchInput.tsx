@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Grid, TextField } from "@mui/material"
 
 
-const SearchInput: React.FC = () => {
+export const SearchInput: React.FC = () => {
   return (
     <Grid container justifyContent='center' alignContent='center' alignItems='center' gap={2}>
       <Grid item xs={6}>
@@ -14,5 +14,3 @@ const SearchInput: React.FC = () => {
     </Grid>
   )
 }
-
-export default SearchInput;

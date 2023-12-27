@@ -1,2 +1,2 @@
-export * from './Home';
-export * from './Search';
+export { Home } from './Home';
+export { Search } from './Search';

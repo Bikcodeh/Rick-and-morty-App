@@ -3,7 +3,7 @@ import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material"
 const navItems = ['Home', 'About', 'Contact'];
 
 
-const NavBar = () => {
+export const NavBar = () => {
     return (
         <AppBar component="nav" position="fixed">
             <Toolbar>
@@ -25,5 +25,3 @@ const NavBar = () => {
         </AppBar>
     )
 }
-
-export default NavBar
