@@ -1,3 +1,4 @@
+export { Pagination } from './Pagination';
 export { CardLocation } from './CardLocation/CardLocation';
 export { Status } from './Status';
 export { CardCharacter } from './CardCharacter/CardCharacter';
