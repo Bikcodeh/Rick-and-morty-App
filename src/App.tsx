@@ -5,12 +5,12 @@ import AppRoutes from "./router/AppRoutes"
 const App = () => {
   return (
     <div>
-    <NavBar>
+      <NavBar>
         <Container fixed style={{ marginTop: 120 }}>
-            <AppRoutes />
+          <AppRoutes />
         </Container>
-    </NavBar>
-</div>
+      </NavBar>
+    </div>
   )
 }
 
