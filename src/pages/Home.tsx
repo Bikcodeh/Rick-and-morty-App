@@ -17,7 +17,7 @@ export const Home = () => {
   return (
     <>
       <Title text="Characters"/>
-      <SearchInput text={querySearch} onInputChange={(text) => setQuerySearch(text)} onSearch={handleOnSearch} />
+      <SearchInput placeholder="characters" text={querySearch} onInputChange={(text) => setQuerySearch(text)} onSearch={handleOnSearch} />
       <Grid mt={8} container justifyContent="center" gap={2} mb={16}>
         {
           rickAndMortyQuery.data?.results.map(character => (<CardCharacter key={character.id} character={character} />))

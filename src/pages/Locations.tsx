@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Grid } from "@mui/material"
-import { SearchInput, Title } from "../components"
+import { CardLocation, SearchInput, Title } from "../components"
 import { useGetData } from "../hooks/useGetData"
 import { Location } from "../interfaces"
 
@@ -10,6 +10,7 @@ export const Locations = () => {
 
   const { rickAndMortyQuery } = useGetData<Location>(querySearch, 'location');
 
+
   const handleOnSearch = () => {
     rickAndMortyQuery.refetch()
   }
@@ -17,10 +18,10 @@ export const Locations = () => {
   return (
     <>
       <Title text="Locations" />
-      <SearchInput text={querySearch} onInputChange={(text) => setQuerySearch(text)} onSearch={handleOnSearch} />
+      <SearchInput placeholder="Location" text={querySearch} onInputChange={(text) => setQuerySearch(text)} onSearch={handleOnSearch} />
       <Grid mt={8} container justifyContent="center" gap={2} mb={16}>
         {
-          JSON.stringify(rickAndMortyQuery.data?.results)
+          rickAndMortyQuery.data?.results.map(location => (<CardLocation onItemClick={value => {}} key={location.id} location={location} />))
         }
       </Grid>
     </>
