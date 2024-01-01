@@ -1,3 +1,4 @@
+export { FormSelect } from './FormSelect';
 export { Pagination } from './Pagination';
 export { CardLocation } from './CardLocation/CardLocation';
 export { Status } from './Status';

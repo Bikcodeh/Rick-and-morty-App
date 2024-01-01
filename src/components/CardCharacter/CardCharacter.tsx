@@ -12,17 +12,18 @@ interface Props {
 
 export const CardCharacter: FC<Props> = ({ character }) => {
     return (
-        <Card component="div" sx={{ border: `2.5px solid ${getCharacterStatusColor(character.status)}` }} className="characterContainer">
+        <Card component="div" sx={{ width: 240 ,border: `2.5px solid ${getCharacterStatusColor(character.status)}` }} className="characterContainer">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <Status status={character.status} />
                 <CardMedia
                     component="img"
                     height="180"
+                    width="100"
                     image={character.image}
                 />
             </div>
-            <CardContent sx={{ width: 220, paddingBottom: '0 !important', display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
-                <Typography gutterBottom variant="h5" component="div" color="black" sx={{ whiteSpace: 'noWrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>
+            <CardContent sx={{ padding: '0 !important', display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
+                <Typography textAlign="center" gutterBottom variant="h5" component="div" color="black" sx={{ whiteSpace: 'noWrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>
                     {character.name}
                 </Typography>
             </CardContent>

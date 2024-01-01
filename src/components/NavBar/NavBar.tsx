@@ -1,6 +1,8 @@
-import { AppBar, Box, Fab, Fade, Toolbar, Typography, useScrollTrigger } from "@mui/material"
-import { KeyboardArrowUp } from '@mui/icons-material'
+import { useEffect, useRef, useState } from "react";
+import { KeyboardArrowUp, Menu } from '@mui/icons-material'
 import { NavLink } from "react-router-dom";
+
+import { AppBar, Box, Divider, Fab, Fade, IconButton, Toolbar, Typography, useScrollTrigger } from "@mui/material"
 import './styles.css'
 
 
@@ -42,34 +44,87 @@ function ScrollTop(props: Props) {
     );
 }
 
+interface ItemsNavBarProps {
+    closeMenu?: () => void;
+}
+
+const ItemsNavBar = ({ closeMenu }: ItemsNavBarProps) => (
+    <>
+        <NavLink to="/" onClick={closeMenu} className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
+            <Typography variant="h6" color="white" component="div">
+                Characters
+            </Typography>
+        </NavLink>
+        <NavLink to="/episodes" onClick={closeMenu} className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
+            <Typography variant="h6" color="white" component="div">
+                Episodes
+            </Typography>
+        </NavLink>
+        <NavLink to="/locations" onClick={closeMenu} className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
+            <Typography variant="h6" color="white" component="div">
+                Locations
+            </Typography>
+        </NavLink>
+    </>
+)
+
 export const NavBar = (props: Props) => {
+
+    const navbarRef = useRef<HTMLElement>(null);
+
+    const [showMenu, setShowMenu] = useState(false);
+
+    const handleShowMenu = () => {
+        setShowMenu(!showMenu);
+    }
+
+    const handleOutsideClick = (event: MouseEvent) => {
+        if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
+            setShowMenu(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleOutsideClick);
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, []);
     return (
         <>
-            <AppBar component="nav" position="fixed">
-                <Toolbar>
+            <AppBar component="nav" position="fixed" ref={navbarRef}>
+                <Toolbar sx={{ display: { xs: 'block', sm: 'flex' }, paddingBottom: { xs: '24px', sm: '0px' } }}>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="menu"
+                        sx={{ mr: 2, display: { xs: 'block', sm: 'none' } }}
+                        onClick={handleShowMenu}
+                    >
+                        <Menu />
+                    </IconButton>
                     <Typography
                         variant="h6"
                         component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        sx={{ flexGrow: 1 }}
                     >
                         Rick & Morty
                     </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'flex' }, flexDirection: 'row' }}>
-                        <NavLink to="/" className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
-                            <Typography variant="h6" color="white" component="div">
-                                Characters
-                            </Typography>
-                        </NavLink>
-                        <NavLink to="/episodes" className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
-                            <Typography variant="h6" color="white" component="div">
-                                Episodes
-                            </Typography>
-                        </NavLink>
-                        <NavLink to="/locations" className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
-                            <Typography variant="h6" color="white" component="div">
-                                Locations
-                            </Typography>
-                        </NavLink>
+                    <Box component="div" sx={{ display: { xs: 'block' } }}>
+                        {
+                            showMenu && (
+                                <div>
+                                    <Divider style={{ marginTop: '8px' }} />
+                                    <Box sx={{ display: { xs: 'block', sm: 'none' }, flexDirection: 'column' }}>
+                                        <ItemsNavBar closeMenu={() => setShowMenu(false)} />
+                                    </Box>
+                                </div>
+                            )
+                        }
+                        <Box sx={{ display: { xs: 'none', sm: 'flex' }, flexDirection: 'row' }}>
+                            <ItemsNavBar />
+                        </Box>
                     </Box>
                 </Toolbar>
             </AppBar>
