@@ -17,16 +17,16 @@ export const handleError = (errorCode: number | undefined): string => {
     const code = errorCode || 0;
     switch (code) {
         case 400:
-            return 'Error: Solicitud incorrecta. Verifica los parámetros de la solicitud.';
+            return 'Error: Bad request. Check the parameters of the request.';
         case 401:
-            return 'Error: No autorizado. Debes iniciar sesión para acceder a esta funcionalidad.';
+            return 'Error: Unauthorized. You need to log in to access this functionality.';
         case 403:
-            return 'Error: Prohibido. No tienes permisos para acceder a esta funcionalidad.';
+            return 'Error: Forbidden. You do not have permission to access this functionality.';
         case 404:
-            return 'Personaje no encontrado.';
+            return 'Character not found.';
         case 500:
-            return 'Error interno del servidor. Por favor, intenta nuevamente más tarde.';
+            return 'Internal server error. Please try again later.';
         default:
-            return `Error desconocido. Código de estado: ${errorCode}`;
+            return `Unknown error. Status code: ${errorCode}`;
     }
 }
