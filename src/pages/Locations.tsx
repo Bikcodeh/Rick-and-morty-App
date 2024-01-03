@@ -23,7 +23,7 @@ export const Locations = () => {
       <SearchInput placeholder="Location" text={querySearch} onInputChange={(text) => setQuerySearch(text)} onSearch={handleOnSearch} />
       <Grid mt={8} container justifyContent="center" gap={2} mb={16}>
         {
-          rickAndMortyQuery.data?.results.map(location => (<CardLocation onItemClick={value => {}} key={location.id} location={location} />))
+          rickAndMortyQuery.data?.results.map(location => (<CardLocation key={location.id} location={location} />))
         }
       </Grid>
     </>

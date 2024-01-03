@@ -5,7 +5,6 @@ import './styles.css';
 
 interface Props {
   location: Location;
-  onItemClick: (ids: string[]) => void;
 }
 
 const InfoContainer = styled.div`
@@ -20,10 +19,10 @@ const DivWrapContent = styled.div`
     margin-left: 4px;
 `;
 
-export const CardLocation: React.FC<Props> = ({ location, onItemClick }) => {
+export const CardLocation: React.FC<Props> = ({ location }) => {
   const date = new Date(location.created).toLocaleDateString('es-ES');
   return (
-    <div className="cardLocation" onClick={() => onItemClick(location.residents)}>
+    <div className="cardLocation">
       <InfoContainer>
         <p>Name: <b>{location.name}</b></p>
       </InfoContainer>
