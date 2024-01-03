@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Grid } from "@mui/material"
-import { CardLocation, SearchInput, Title } from "../components"
+import { CardLocation, Loading, SearchInput, Title } from "../components"
 import { useGetData } from "../hooks/useGetData"
 import { Location } from "../interfaces"
 
@@ -14,6 +14,8 @@ export const Locations = () => {
   const handleOnSearch = () => {
     rickAndMortyQuery.refetch()
   }
+
+  if (rickAndMortyQuery.isLoading) return (<Loading />)
 
   return (
     <>

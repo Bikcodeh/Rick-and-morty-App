@@ -1,3 +1,4 @@
+export { Loading } from './Loading';
 export { FormSelect } from './FormSelect';
 export { Pagination } from './Pagination';
 export { CardLocation } from './CardLocation/CardLocation';

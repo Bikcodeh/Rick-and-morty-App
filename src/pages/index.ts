@@ -1,3 +1,4 @@
+export { Character } from './Character';
 export { Locations } from './Locations';
 export { Episodes } from './Episodes';
 export { Home } from './Home';

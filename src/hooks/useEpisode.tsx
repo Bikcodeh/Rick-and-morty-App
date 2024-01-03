@@ -1,7 +1,11 @@
 import { useQuery } from "react-query";
 import { rickAndMortyApi } from "../api/rickAndMortyApi"
-import { Episode } from "../interfaces"
-import { getCharacterData } from "./useCharacter";
+import { Episode, Character } from "../interfaces"
+
+export async function getCharacterData(ids: string): Promise<Character[]> {
+    const { data } = await rickAndMortyApi.get<Character[]>(`/character/${ids}`);
+    return data;
+}
 
 const getEpisode = async (numCap: string): Promise<Episode> => {
     const { data } = await rickAndMortyApi.get<Episode>(`/episode/${numCap}`)
@@ -9,8 +13,6 @@ const getEpisode = async (numCap: string): Promise<Episode> => {
 }
 
 export const useGetEpisode = (numCap: string) => {
-
-    console.log('reeeeeeender');
 
     const episodeQuery = useQuery({
         queryFn: () => getEpisode(numCap),

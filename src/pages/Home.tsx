@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { CircularProgress, Grid } from "@mui/material"
-import { CardCharacter, Pagination, SearchInput, Title } from "../components"
+import { CircularProgress, Grid, Typography } from "@mui/material"
+import { CardCharacter, Loading, Pagination, SearchInput, Title } from "../components"
 import { useGetData } from "../hooks/useGetData"
 import { Character } from "../interfaces"
 
@@ -13,6 +13,10 @@ export const Home = () => {
   const handleOnSearch = () => {
     rickAndMortyQuery.refetch()
   }
+
+  if (rickAndMortyQuery.isLoading || rickAndMortyQuery.isFetching) return (<Loading />);
+
+  if (rickAndMortyQuery.isError) return (<Typography variant="h4">Error</Typography>);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
