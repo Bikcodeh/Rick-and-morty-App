@@ -1,3 +1,4 @@
+export { Error } from './Error';
 export { Loading } from './Loading';
 export { FormSelect } from './FormSelect';
 export { Pagination } from './Pagination';
