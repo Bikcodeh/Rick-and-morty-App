@@ -14,5 +14,9 @@ module.exports = {
     transformIgnorePatterns: ["/node_modules/(?!query-string)/"],
     transform: {
         "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
+    },
+    setupFilesAfterEnv: ['jest-canvas-mock'],
+    moduleNameMapper: {
+        "\\.(css|sass)$": "identity-obj-proxy",
     }
 }
