@@ -14,11 +14,11 @@ export const Pagination: FC<Props> = ({ currentPage, onNext, onPrev, prevAvailab
     return (
         <Grid container component="div" justifyContent="space-between" alignContent="center" alignItems="center" mb={8}>
             <Grid item>
-                <Button disabled={ isFetching || !prevAvailable} onClick={() => onPrev()} variant="contained">Prev</Button>
+                <Button aria-label="prev-button" disabled={ isFetching || !prevAvailable} onClick={() => onPrev()} variant="contained">Prev</Button>
             </Grid>
             <Typography fontWeight={700} component="h4">{currentPage}</Typography>
             <Grid item>
-                <Button disabled={ isFetching || !nextAvailable} onClick={() => onNext()} variant="contained">Next</Button>
+                <Button aria-label="next-button" disabled={ isFetching || !nextAvailable} onClick={() => onNext()} variant="contained">Next</Button>
             </Grid>
         </Grid>
     )
