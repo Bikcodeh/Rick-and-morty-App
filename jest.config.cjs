@@ -1,5 +1,6 @@
 module.exports = {
-    testEnvironment: 'jest-environment-jsdom',
+    preset: 'ts-jest',
+    testEnvironment: 'jsdom',
     globals: {
         "ts-jest": {
             transformerConfig: {
