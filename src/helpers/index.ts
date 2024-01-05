@@ -27,6 +27,6 @@ export const handleError = (errorCode: number | undefined): string => {
         case 500:
             return 'Internal server error. Please try again later.';
         default:
-            return `Unknown error. Status code: ${errorCode}`;
+            return `Unknown error. Status code: ${code}`;
     }
 }
