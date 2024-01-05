@@ -4,7 +4,7 @@ import { useQuery } from "react-query"
 import { rickAndMortyApi } from "../api/rickAndMortyApi";
 import { ApiResponse, Character } from "../interfaces";
 
-async function getData<T>(query: string, endpoint: string, page: string): Promise<ApiResponse<T>> {
+export async function getData<T>(query: string, endpoint: string, page: string): Promise<ApiResponse<T>> {
     const { data } = await rickAndMortyApi.get<ApiResponse<T>>(`/${endpoint}?name=${query}&page=${page}`);
     return data;
 }
