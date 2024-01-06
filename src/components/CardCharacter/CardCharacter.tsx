@@ -24,6 +24,7 @@ export const CardCharacter: FC<Props> = ({ character }) => {
                 border: `2.5px solid ${getCharacterStatusColor(character.status)}`
             }}
             className="characterContainer"
+            aria-label="container-character"
         >
             <div
                 style={{
