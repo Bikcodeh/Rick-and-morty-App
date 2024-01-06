@@ -19,5 +19,8 @@ module.exports = {
     setupFilesAfterEnv: ['jest-canvas-mock'],
     moduleNameMapper: {
         "\\.(css|sass)$": "identity-obj-proxy",
-    }
+    },
+    testPathIgnorePatterns: [
+        '/__tests__/utils',
+      ],
 }

@@ -1,25 +1,15 @@
-import * as reactQuery from 'react-query';
-import { QueryClientProvider } from 'react-query';
 import { BrowserRouter } from 'react-router-dom';
-import { act, fireEvent, render, screen, waitFor } from "@testing-library/react";
-import MockAdapter from 'axios-mock-adapter';
-import '@testing-library/jest-dom';
-
+import { act, fireEvent, screen, waitFor } from "@testing-library/react";
 import { ApiResponse, Character, StatusCharacter } from '../../src/interfaces';
 import { Home } from '../../src/pages';
-import { rickAndMortyApi } from '../../src/api/rickAndMortyApi';
-
+import { mock, client, renderWithClient } from '../utils';
 
 const mockUseNavigate = jest.fn();
 
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,
-  }));
-
-const mock = new MockAdapter(rickAndMortyApi);
-
-const client = new reactQuery.QueryClient()
+}));
 
 const dataSuccess: ApiResponse<Character> = {
     info: {
@@ -886,13 +876,6 @@ const dataSuccess2: ApiResponse<Character> =
 
 }
 
-
-function renderWithClient(client: reactQuery.QueryClient, ui: React.ReactElement) {
-    const { rerender, ...result } = render(
-        <QueryClientProvider client={client}>{ui}</QueryClientProvider>
-    )
-}
-
 describe('Tests for <Home />', () => {
 
     beforeEach(() => {
@@ -932,11 +915,10 @@ describe('Tests for <Home />', () => {
 
     test('should paginate when click on next button correctly', async () => {
         mock.onGet('https://rickandmortyapi.com/api/character?name=&page=1').reply(200, dataSuccess);
-        const { container } = render(
+        const { container } = renderWithClient(
+            client,
             <BrowserRouter>
-                <QueryClientProvider client={client}>
-                    <Home />
-                </QueryClientProvider>
+                <Home />
             </BrowserRouter>
         )
 
@@ -951,7 +933,7 @@ describe('Tests for <Home />', () => {
 
     test('should paginate when click on prev button correctly', async () => {
         mock.onGet('https://rickandmortyapi.com/api/character?name=&page=1').reply(200, dataSuccess);
-        await act(() =>
+        const { container } = await act(() =>
             renderWithClient(
                 client,
                 <BrowserRouter>
@@ -972,6 +954,6 @@ describe('Tests for <Home />', () => {
         await act(async () => {
             fireEvent.click(prevButton);
         });
-        expect(document.getElementsByClassName('characterContainer').length).toBe(20);
+        expect(container.getElementsByClassName('characterContainer').length).toBe(20);
     });
 });
