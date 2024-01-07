@@ -1,8 +1,26 @@
 import { BrowserRouter } from 'react-router-dom';
+import * as reactQuery from 'react-query';
+import {render } from "@testing-library/react";
+import MockAdapter from 'axios-mock-adapter';
+import '@testing-library/jest-dom';
+import { QueryClientProvider } from 'react-query';
+import { rickAndMortyApi } from '../../src/api/rickAndMortyApi';
 import { act, fireEvent, screen, waitFor } from "@testing-library/react";
 import { ApiResponse, Character, StatusCharacter } from '../../src/interfaces';
 import { Home } from '../../src/pages';
-import { mock, client, renderWithClient } from '../utils';
+
+const mock = new MockAdapter(rickAndMortyApi);
+
+const client = new reactQuery.QueryClient()
+
+function renderWithClient(client: reactQuery.QueryClient, ui: React.ReactElement) {
+    const { container } = render(
+        <QueryClientProvider client={client}>{ui}</QueryClientProvider>
+    )
+    return {
+        container
+    }
+}
 
 const mockUseNavigate = jest.fn();
 

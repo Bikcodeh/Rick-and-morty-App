@@ -1,13 +1,27 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import * as reactQuery from 'react-query';
 import { act, render, screen, waitFor } from "@testing-library/react";
 import userEvent from '@testing-library/user-event'
 import MockAdapter from 'axios-mock-adapter';
+import { QueryClientProvider } from 'react-query';
 
 import { Locations } from '../../src/pages';
-import { client, renderWithClient } from '../utils';
 import { ApiResponse, Location } from '../../src/interfaces';
 import { rickAndMortyApi } from '../../src/api/rickAndMortyApi';
+
+const mock = new MockAdapter(rickAndMortyApi);
+
+const client = new reactQuery.QueryClient()
+
+function renderWithClient(client: reactQuery.QueryClient, ui: React.ReactElement) {
+    const { container } = render(
+        <QueryClientProvider client={client}>{ui}</QueryClientProvider>
+    )
+    return {
+        container
+    }
+}
 
 const data: ApiResponse<Location> = {
     info: {
@@ -728,22 +742,13 @@ const dataSearch: ApiResponse<Location> =
     ]
 }
 
-const mock = new MockAdapter(rickAndMortyApi);
-
 describe('Tests for <Locations />', () => {
 
-    beforeEach(() => {
-        mock.reset();
-    })
+    beforeEach(() => mock.reset())
 
-    test('should render locations correctly', async () => {
-        mock.onGet('https://rickandmortyapi.com/api', {
-            params: {
-                name: '',
-                page: '1'
-            }
-        }).reply(200, data);
+    test('should match snaptshot', async () => {
 
+        mock.onGet('https://rickandmortyapi.com/api/location?name=&page=1').reply(200, data);
         const { container } = await act(() =>
             renderWithClient(
                 client,
@@ -757,6 +762,7 @@ describe('Tests for <Locations />', () => {
 
     test('should display all items from api', async () => {
         mock.onGet('https://rickandmortyapi.com/api/location?name=&page=1').reply(200, data);
+
         const { container } = await act(() =>
             renderWithClient(
                 client,
@@ -765,6 +771,7 @@ describe('Tests for <Locations />', () => {
                 </BrowserRouter>
             )
         );
+        await waitFor(() => new Promise((res) => setTimeout(res, 600)));
         expect(container.getElementsByClassName('cardLocation').length).toBe(20);
     });
 
@@ -781,7 +788,7 @@ describe('Tests for <Locations />', () => {
         );
 
         const searchInput = await screen.getByTestId('search-input');
-        await act(async () => user.type(searchInput,'earth'))
+        await act(async () => user.type(searchInput, 'earth'))
         const searchButton = screen.getByLabelText("search-button");
         mock.onGet('https://rickandmortyapi.com/api/location?name=earth&page=1').reply(200, dataSearch);
         await user.click(searchButton)
