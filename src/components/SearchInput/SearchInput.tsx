@@ -26,6 +26,7 @@ export const SearchInput: React.FC<Props> = ({ text, placeholder, onInputChange,
       <Grid item xs={6}>
         <TextField
           aria-label="search-input"
+          inputProps={{ 'data-testid': 'search-input' }}
           value={text}
           className="searchInput"
           fullWidth size="small"
@@ -39,7 +40,10 @@ export const SearchInput: React.FC<Props> = ({ text, placeholder, onInputChange,
         <Button
           onClick={() => onSearch()}
           variant='contained'
-        >Search</Button>
+          aria-label="search-button"
+        >
+          Search
+        </Button>
       </Grid>
     </Grid>
   )
