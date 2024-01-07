@@ -1,0 +1,804 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <Home /> should match snapshot 1`] = `
+<div>
+  <div
+    style="display: flex; flex-direction: column;"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-1nimqk6-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 css-5lbw0b-MuiTypography-root"
+        >
+          Characters
+        </h4>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container css-1ehu80w-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
+      >
+        <div
+          aria-label="search-input"
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root searchInput css-wb57ya-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="outlined-basic"
+            id="outlined-basic-label"
+          >
+            Search characters
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-sizeSmall css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="search-input"
+              id="outlined-basic"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Search characters
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <button
+          aria-label="search-button"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Search
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container css-1xuqgzh-MuiGrid-root"
+    >
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Rick Sanchez
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Morty Smith
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Summer Smith
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/4.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Beth Smith
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Jerry Smith
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/6.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Abadango Cluster Princess
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Abradolf Lincler
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/8.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Adjudicator Rick
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/9.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Agency Director
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/10.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Alan Rails
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/11.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Albert Einstein
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/12.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Alexander
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/13.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Alien Googah
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/14.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Alien Morty
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/15.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Alien Rick
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/16.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Amish Cyborg
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/17.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Annie
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/18.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Antenna Morty
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/19.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Antenna Rick
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="container-character"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root characterContainer css-1gn9yi6-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          style="display: flex; flex-direction: column;"
+        >
+          <div
+            aria-label="container-status"
+            class="css-n3e3t7"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1bsb2q8-MuiTypography-root"
+            >
+              Alive
+            </p>
+          </div>
+          <img
+            class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            height="180"
+            src="https://rickandmortyapi.com/api/character/avatar/20.jpeg"
+            width="100"
+          />
+        </div>
+        <div
+          class="MuiCardContent-root css-bwfyqf-MuiCardContent-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-ipvird-MuiTypography-root"
+          >
+            Ants in my Eyes Johnson
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-ipa8bx-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        >
+          <button
+            aria-label="prev-button"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            Prev
+          </button>
+        </div>
+        <h4
+          class="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+        >
+          1
+        </h4>
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        >
+          <button
+            aria-label="next-button"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Next
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

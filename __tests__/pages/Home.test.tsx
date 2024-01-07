@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import * as reactQuery from 'react-query';
-import {render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import MockAdapter from 'axios-mock-adapter';
 import '@testing-library/jest-dom';
 import { QueryClientProvider } from 'react-query';
@@ -899,6 +899,19 @@ describe('Tests for <Home />', () => {
     beforeEach(() => {
         mock.reset()
     })
+
+    test('should match snapshot', async () => {
+        mock.onGet('https://rickandmortyapi.com/api/character?name=&page=1').reply(200, dataSuccess);
+        const { container } = await act(() =>
+            renderWithClient(
+                client,
+                <BrowserRouter>
+                    <Home />
+                </BrowserRouter>
+            )
+        );
+        expect(container).toMatchSnapshot();
+    });
 
     test('should render correctly', async () => {
         mock.onGet('https://rickandmortyapi.com/api/character?name=&page=1').reply(200, dataSuccess);
