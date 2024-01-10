@@ -1,6 +1,7 @@
 import { useState } from "react"
+import { AxiosError } from "axios"
 import { Grid } from "@mui/material"
-import { CardLocation, Loading, SearchInput, Title } from "../components"
+import { CardLocation, Error, Loading, SearchInput, Title } from "../components"
 import { useGetData } from "../hooks/useGetData"
 import { Location } from "../interfaces"
 
@@ -15,7 +16,7 @@ export const Locations = () => {
     rickAndMortyQuery.refetch()
   }
 
-  if (rickAndMortyQuery.isLoading) return (<Loading />)
+  if (rickAndMortyQuery.isLoading || rickAndMortyQuery.isFetching) return (<Loading />)
 
   return (
     <>
@@ -23,7 +24,9 @@ export const Locations = () => {
       <SearchInput placeholder="Location" text={querySearch} onInputChange={(text) => setQuerySearch(text)} onSearch={handleOnSearch} />
       <Grid mt={8} container justifyContent="center" gap={2} mb={16}>
         {
-          rickAndMortyQuery.data?.results.map(location => (<CardLocation key={location.id} location={location} />))
+           rickAndMortyQuery.isError
+           ? <Error error={rickAndMortyQuery.error as AxiosError} />
+           : rickAndMortyQuery.data?.results.map(location => (<CardLocation key={location.id} location={location} />))
         }
       </Grid>
     </>
