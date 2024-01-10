@@ -19,7 +19,6 @@ export const Home = () => {
 
   if (isLoading || isFetching) return (<Loading />);
 
-
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Title text="Characters" />

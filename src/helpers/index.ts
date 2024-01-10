@@ -23,10 +23,10 @@ export const handleError = (errorCode: number | undefined): string => {
         case 403:
             return 'Error: Forbidden. You do not have permission to access this functionality.';
         case 404:
-            return 'Character not found.';
+            return 'Resource not found.';
         case 500:
             return 'Internal server error. Please try again later.';
         default:
-            return `Unknown error. Status code: ${errorCode}`;
+            return `Unknown error. Status code: ${code}`;
     }
 }

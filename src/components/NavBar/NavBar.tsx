@@ -50,17 +50,17 @@ interface ItemsNavBarProps {
 
 const ItemsNavBar = ({ closeMenu }: ItemsNavBarProps) => (
     <>
-        <NavLink to="/" onClick={closeMenu} className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
+        <NavLink aria-label="characters-navbar-item" to="/" onClick={closeMenu} className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
             <Typography variant="h6" color="white" component="div">
                 Characters
             </Typography>
         </NavLink>
-        <NavLink to="/episodes" onClick={closeMenu} className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
+        <NavLink aria-label="episodes-navbar-item" to="/episodes" onClick={closeMenu} className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
             <Typography variant="h6" color="white" component="div">
                 Episodes
             </Typography>
         </NavLink>
-        <NavLink to="/locations" onClick={closeMenu} className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
+        <NavLink aria-label="locations-navbar-item" to="/locations" onClick={closeMenu} className={({ isActive }) => `navBarItem ${isActive ? 'active' : ''}`}>
             <Typography variant="h6" color="white" component="div">
                 Locations
             </Typography>

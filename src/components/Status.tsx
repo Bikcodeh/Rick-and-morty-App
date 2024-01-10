@@ -21,7 +21,7 @@ const StatusBadge = styled.div<Props>`
 
 export const Status: FC<Props> = ({ status }) => {
     return (
-        <StatusBadge status={status}>
+        <StatusBadge status={status} aria-label="container-status">
             <Typography color="white" fontSize={12} fontWeight={900}>{status}</Typography>
         </StatusBadge>
     )

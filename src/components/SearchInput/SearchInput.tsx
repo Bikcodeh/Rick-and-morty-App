@@ -16,12 +16,34 @@ export const SearchInput: React.FC<Props> = ({ text, placeholder, onInputChange,
   }
 
   return (
-    <Grid container justifyContent='center' alignContent='center' alignItems='center' gap={2}>
+    <Grid
+      container
+      justifyContent='center'
+      alignContent='center'
+      alignItems='center'
+      gap={2}
+    >
       <Grid item xs={6}>
-        <TextField value={text} className="searchInput" fullWidth size="small" id="outlined-basic" label={`Search ${placeholder}`} variant="outlined" onChange={handleOnChange} />
+        <TextField
+          aria-label="search-input"
+          inputProps={{ 'data-testid': 'search-input' }}
+          value={text}
+          className="searchInput"
+          fullWidth size="small"
+          id="outlined-basic"
+          label={`Search ${placeholder}`}
+          variant="outlined"
+          onChange={handleOnChange}
+        />
       </Grid>
       <Grid item>
-        <Button onClick={() => onSearch()} variant='contained'>Search</Button>
+        <Button
+          onClick={() => onSearch()}
+          variant='contained'
+          aria-label="search-button"
+        >
+          Search
+        </Button>
       </Grid>
     </Grid>
   )
